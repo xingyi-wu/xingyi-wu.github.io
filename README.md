@@ -1,4 +1,4 @@
-# Xingyi Wu Academic Website — v3
+# Xingyi Wu Academic Website
 
 GitHub Pages-ready academic website.
 
