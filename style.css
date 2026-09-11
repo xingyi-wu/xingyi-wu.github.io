@@ -522,3 +522,24 @@ footer {
   margin: 0 auto;
   object-fit: contain;
 }
+
+.presentation-heading {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  gap: 24px;
+}
+
+.presentation-heading>strong {
+  flex: 0 1 auto;
+}
+
+.presentation-date {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
