@@ -136,6 +136,8 @@ a:hover {
   font-weight: 700;
 }
 
+
+
 .hero-copy h2,
 .page-title {
   margin: 0 0 18px;
@@ -155,6 +157,12 @@ a:hover {
   background: var(--soft);
   border-left: 4px solid var(--accent);
   border-radius: 4px;
+  font-size: 18px;
+}
+
+.callout-last {
+  margin: 16px 0 0;
+  font-size: 8px;
 }
 
 .pages-block {
@@ -229,6 +237,10 @@ a:hover {
   border-top: 1px solid var(--line);
 }
 
+.presentations-section {
+  border-top: none;
+}
+
 .cards {
   display: grid;
   gap: 18px;
@@ -261,13 +273,22 @@ a:hover {
 }
 
 .pub-list li {
-  padding: 18px 0;
+  padding: 16px 0;
+  /* 每条文献上下的间距，原来是 18px */
+  margin: 0;
+  line-height: 1.25;
+  /* 同一条文献内部的行距 */
   border-bottom: 1px solid var(--line);
+}
+
+.pub-list>li:last-child {
+  border-bottom: 0;
 }
 
 .status {
   color: var(--muted);
   font-style: italic;
+  text-decoration: underline;
 }
 
 .timeline-item {
@@ -475,14 +496,24 @@ footer {
 }
 
 .presentation-year {
-  margin: 24px 0 8px;
+  margin: 8px 0 4px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 19px;
 }
 
 .presentation-item {
-  padding: 18px 0;
+  padding: 16px 0;
+  margin: 0;
+  line-height: 1.25;
   border-bottom: 1px solid var(--line);
+}
+
+.presentation-item p {
+  margin: 0;
+}
+
+.presentation-item:last-child {
+  border-bottom: none;
 }
 
 .presentation-item>strong {
@@ -537,9 +568,42 @@ footer {
 .presentation-date {
   margin-left: auto;
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--muted);
   text-align: right;
   white-space: nowrap;
+}
+
+.baseball-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.life-card .baseball-photos img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.travel-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.life-card .travel-photos img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
 }
