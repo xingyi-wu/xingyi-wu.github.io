@@ -37,7 +37,7 @@ You can change the captions directly in `beyond.html`.
 
 ## CV
 Export your CV as:
-`Xingyi_Wu_CV.pdf`
+`Xingyi_Wu_CV_%YYMMDD.pdf`
 
 Put it in the repository root. The CV links already open it in a new browser tab.
 
