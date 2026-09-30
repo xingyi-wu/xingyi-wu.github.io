@@ -607,3 +607,7 @@ footer {
   aspect-ratio: auto;
   object-fit: cover;
 }
+
+.presentations-section sup {
+  font-size: 0.3em;
+}
