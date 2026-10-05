@@ -611,3 +611,158 @@ footer {
 .presentations-section sup {
   font-size: 0.3em;
 }
+
+/* Resources */
+.resources-intro,
+.section-description,
+.empty-share {
+  color: var(--muted);
+}
+
+.resources-intro {
+  margin: 0 0 36px;
+}
+
+.resources-section .section-title {
+  margin-bottom: 6px;
+}
+
+.section-description {
+  margin: 0 0 24px;
+  font-size: 15px;
+}
+
+.shared-app h3 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.app-version {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.gallery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 26px;
+  font-weight: 700;
+}
+
+.gallery-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.gallery-controls button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: white;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.gallery-controls button:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+.gallery-hint {
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.app-gallery {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 4px 2px 16px;
+  cursor: grab;
+  touch-action: pan-x pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: #c4d3c5 #f4f6f4;
+}
+
+.app-gallery.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.app-shot {
+  flex: 0 0 210px;
+  margin: 0;
+}
+
+.app-shot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border-radius: 15px;
+  background: #f2f7f2;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.app-shot figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.app-gallery:focus-visible,
+.gallery-controls button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.empty-share {
+  padding: 18px 20px;
+  margin: 0;
+  background: var(--soft);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.download-pending,
+.download-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #eef4ee;
+  color: #426247;
+}
+
+.app-features {
+  padding-left: 22px;
+}
+
+@media (max-width: 760px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .app-shot {
+    flex-basis: 185px;
+  }
+
+  .shared-app h3 {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
